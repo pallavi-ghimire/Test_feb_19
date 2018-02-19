@@ -48,3 +48,27 @@ print(e.first_name)
 print(e.last_name)
 print(e.salary)
 e.email()
+
+
+"""Q4. Create a Temperature class. Make two methods :
+      a. convertFahrenheit - It will take Celsius and will print it into Fahrenheit.
+      b. convertCelsius - It will take Fahrenheit and will convert it into Celsius."""
+
+class Temp:
+    def __init__(self, temp):
+        self.temp = temp
+    def convertFahrenheit(self):
+        f = self.temp-32*(5/9)
+        return f
+    def convertCelsius(self):
+        c = self.temp*(9/5)+32
+        return c
+i = input("C or f? c for c, f for f: ")
+if i == c:
+    cel = int(input("Enter value: "))
+    t = Temp(cel)
+    print(t.convertCelsius())
+else:
+    fah = int(input("Enter value: "))
+    t = Temp(fah)
+    print(t.convertFahrenheit())
