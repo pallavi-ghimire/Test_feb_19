@@ -33,6 +33,18 @@ c = Circle(3)
 print(c.getArea(), c.getCircumference())
 
 
-"""Create a Employee class and initialize it with first_name, last_name and salary. Also, it has a derived attribute called email, which is self generated when instance is created. Now, make methods to :
+"""Create a Employee class and initialize it with first_name, last_name and salary. Also, it has a derived attribute called email, which
+ is self generated when instance is created. Now, make methods to :
       a. Display - It should display all information of the employee instance."""
 
+class Employee:
+    first_name = "One"
+    last_name = "Two"
+    salary = 20000
+    def email(self):
+        print(Employee.first_name + '.' + Employee.last_name + "@example.com")
+e = Employee()
+print(e.first_name)
+print(e.last_name)
+print(e.salary)
+e.email()
