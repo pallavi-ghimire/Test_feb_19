@@ -72,3 +72,23 @@ else:
     fah = int(input("Enter value: "))
     t = Temp(fah)
     print(t.convertFahrenheit())
+
+"""Q5. Define an Student class and initialize it with name and section. Now, make a classmethod that takes in a string
+ parameter "name-A" which creates an instance and returns the instance based on parameter. [Hint: use @classmethod decorator]"""
+
+
+class Student:
+    def __init__(self, name, section):
+        self.name = name
+        self.section = section
+    def get_name(self):
+        return self.name
+
+    @classmethod  # decorator
+    def get_st_from_string(cls, inp):
+        name, section = inp.split("-")
+        return cls(name, section)
+
+
+e = Student.get_st_from_string("Aaaaa-a")
+print(e.__dict__)
