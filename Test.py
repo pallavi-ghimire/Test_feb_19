@@ -7,10 +7,15 @@ class RectangleGeometry:
         self.breadth = breadth
     def getArea(self):
         area = self.length*self.breadth
-        print(area)
+        return area
     def getPerimeter(self):
         perimeter = 2*(self.length+self.breadth)
-        print(perimeter)
+        return perimeter
 
 r = RectangleGeometry(1,2)
-r.getArea(), r.getPerimeter()
+print(r.getArea(), r.getPerimeter())
+
+
+"""Q2. Create a class Circle which has a class variable PI with the value=22/7. Make two methods getArea and getCircumference inside 
+this Circle class. Which when invoked returns area and circumference of each circle instances."""
+
